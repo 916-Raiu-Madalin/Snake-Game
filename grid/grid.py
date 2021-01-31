@@ -145,29 +145,30 @@ class Grid:
                         if self.grid[a + 1][b] != "." and self.grid[a][b + 1] != "." and self.grid[a - 1][b] != "." and \
                                 self.grid[a][b - 1] != ".":
                             self.grid[a][b] = '.'
-                            x -= 1
+
                     if a == 0 and b > 0 and self.grid[a][b] == "" and b < (self._dimension - 1):
                         if self.grid[a + 1][b] != "." and self.grid[a][b + 1] != "." and self.grid[a][b - 1]:
                             self.grid[a][b] = '.'
-                            x -= 1
+
                     elif a == self._dimension - 1 and b > 0 and self.grid[a][b] == "" and b < (self._dimension - 1):
                         if self.grid[a - 1][b] != "." and self.grid[a][b - 1] != "." and self.grid[a][b + 1]:
                             self.grid[a][b] = '.'
-                            x -= 1
+
                     elif a == self._dimension - 1 and b == 0 and self.grid[a][b] == "":
                         if self.grid[a - 1][b] != "." and self.grid[a][b + 1] != ".":
                             self.grid[a][b] = '.'
-                            x -= 1
+
                     elif a == self._dimension - 1 and b == self._dimension - 1 and self.grid[a][b] == "":
                         if self.grid[a - 1][b] != "." and self.grid[a][b - 1] != ".":
                             self.grid[a][b] = '.'
-                            x -= 1
+
                     elif a > 0 and a < self._dimension - 1 and b == 0:
                         if self.grid[a - 1][b] != "." and self.grid[a][b + 1] != "." and self.grid[a + 1][b]:
                             self.grid[a][b] = '.'
-                            x -= 1
+
                     elif a > 0 and a < self._dimension - 1 and b == self._dimension - 1:
                         if self.grid[a - 1][b] != "." and self.grid[a][b + -1] != "." and self.grid[a + 1][b]:
                             self.grid[a][b] = '.'
-                            x -= 1
+
                     y -= 1
+            x-=1
